@@ -1,5 +1,7 @@
 package main;
 
+import java.net.SocketOption;
+
 public class SinglyLinkedList {
     private static class Node {
         private int data;
@@ -16,6 +18,10 @@ public class SinglyLinkedList {
     public static void main(String[] args) {
        SinglyLinkedList linkedlist = new SinglyLinkedList();
        System.out.println(linkedlist);
+        linkedlist.inserthead(42);
+        linkedlist.inserthead(52);
+        System.out.println(linkedlist);
+
     }
 
     @Override
@@ -38,6 +44,8 @@ public class SinglyLinkedList {
         return result.toString();
     }
     private void inserthead(int data){
-
+        Node newNode = new Node(data,this.head);
+        this.head = newNode;
+        size++;
     }
 }
