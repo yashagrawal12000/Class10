@@ -23,8 +23,21 @@ public class SinglyLinkedList {
         StringBuilder result = new StringBuilder();
         result.append("[");
 
+        Node temp = this.head;
+        while (temp != null)
+        {
+            result.append(temp.data);
+            if(temp.next != null)
+            {
+                result.append(" ==> ");
+            }
+            temp = temp.next;
+        }
 
         result.append("]");
         return result.toString();
+    }
+    private void inserthead(int data){
+
     }
 }
