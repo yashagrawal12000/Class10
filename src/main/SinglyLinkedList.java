@@ -18,8 +18,10 @@ public class SinglyLinkedList {
     public static void main(String[] args) {
        SinglyLinkedList linkedlist = new SinglyLinkedList();
        System.out.println(linkedlist);
-        linkedlist.inserthead(42);
-        linkedlist.inserthead(52);
+        linkedlist.inserthead(1);
+        linkedlist.inserthead(2);
+        linkedlist.inserthead(3);
+        linkedlist.inserthead(4);
         System.out.println(linkedlist);
 
     }
@@ -53,5 +55,21 @@ public class SinglyLinkedList {
         Node newNode = new Node(data,node.next);
         node.next = newNode;
         size++;
+    }
+    public void inseret(int data)
+    {
+        if(head == null)
+        {
+            inserthead(data);
+        }
+        else
+        {
+            Node temp = this.head;
+            while(temp.next != null)
+            {
+                temp = temp.next;
+                insertAfter(data,temp);
+            }
+        }
     }
 }
