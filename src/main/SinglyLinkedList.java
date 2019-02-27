@@ -14,6 +14,17 @@ public class SinglyLinkedList {
         private Node head = null;
 
     public static void main(String[] args) {
-       SinglyLinkedList singlylinkedlist = new SinglyLinkedList();
+       SinglyLinkedList linkedlist = new SinglyLinkedList();
+       System.out.println(linkedlist);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+        result.append("[");
+
+
+        result.append("]");
+        return result.toString();
     }
 }
